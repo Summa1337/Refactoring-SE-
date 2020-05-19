@@ -45,24 +45,9 @@ class Customer {
         return result;
     }
 
-    private double amountFor(Rental rent) {
-        double result = 0;
-        switch (rent.getMovie().getPriceCode()) {
-            case Movie.REGULAR:
-                result += 2;
-                if (rent.getDaysRented() > 2)
-                    result += (rent.getDaysRented() - 2) * 1.5;
-                break;
-            case Movie.NEW_RELEASE:
-                result += rent.getDaysRented() * 3;
-                break;
-            case Movie.CHILDRENS:
-                result += 1.5;
-                if (rent.getDaysRented() > 3)
-                    result += (each.getDaysRented() - 3) * 1.5;
-                break;
-        }
-        return result;
+    private double amountFor(Rental rent)
+    {
+        return rent.getPrice();
     }
 
 }
