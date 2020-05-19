@@ -8,13 +8,16 @@ public class Movie {
         title = newtitle;
         priceCode = newpriceCode;
     }
-    public int getPriceCode() {
+    public int getPriceCode()
+    {
         return priceCode;
     }
-    public void setPriceCode(int arg) {
+    public void setPriceCode(int arg)
+    {
         priceCode = arg;
     }
-    public String getTitle (){
+    public String getTitle ()
+    {
         return title;
-    };
+    }
 }
