@@ -2,7 +2,8 @@
 import java.lang.*;
 import java.util.*;
 
-class Customer {
+class Customer
+{
     private String name;
     private Vector rentals = new Vector();
     public Customer (String newname)
@@ -27,9 +28,9 @@ class Customer {
 
         while (enum_rentals.hasMoreElements()) {
             double thisAmount = 0;
-            Rental each = (Rental) enum_rentals.nextElement();
+            Rental rent = (Rental) enum_rentals.nextElement();
             //determine amounts for each line
-            thisAmount = amountFor(each);
+            thisAmount = rent.getPrice();
             // add frequent renter points
             frequentRenterPoints++;
             // add bonus for a two day new release rental
@@ -44,11 +45,5 @@ class Customer {
         result += "You earned " + String.valueOf(frequentRenterPoints) + " frequent renter points";
         return result;
     }
-
-    private double amountFor(Rental rent)
-    {
-        return rent.getPrice();
-    }
-
 }
     
